@@ -102,8 +102,8 @@ section[id]{scroll-margin-top:1rem}
   cursor: pointer;
 }
 .motion-toggle[aria-pressed="true"] { border-color: var(--green); }
-.geo i, .orbit > div { animation-play-state: paused; }
-.motion-running .geo i, .motion-running .orbit > div { animation-play-state: running; }
+/* Supera la especificidad de los atajos animation de los anillos. */
+:root:not(.motion-running) :is(.geo i, .orbit > div) { animation-play-state: paused; }
 
 /* proyectos */
 .projects{padding:90px 0 70px}
