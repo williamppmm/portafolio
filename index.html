@@ -4,110 +4,130 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Portafolio de William Pérez Muñoz, tecnólogo ADSO en Cali con experiencia en procesos contables. Desarrollo web, automatización y análisis de datos.">
-  <meta name="theme-color" content="#f6f5ef">
+  <meta name="theme-color" content="#060a18">
   <title>William Pérez Muñoz · Portafolio</title>
-  <link rel="icon" href="assets/wp.png" type="image/png">
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;800&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <script src="portfolio.js" defer></script>
 </head>
 <body>
   <a class="skip" href="#contenido">Saltar al contenido</a>
-  <header class="header wrap" id="inicio">
-    <a class="brand" href="#inicio" aria-label="William Pérez Muñoz, inicio"><span class="brand-mark"><img src="assets/wp.png" width="40" height="40" alt=""></span><b>williamppmm</b></a>
+  <canvas class="line-field" aria-hidden="true"></canvas>
+  <div class="geo" aria-hidden="true"><i class="ring" style="width:90px;height:90px;left:6%;top:18%;--d:14s"></i><i class="sq" style="width:34px;height:34px;left:46%;top:12%;--d:11s"></i><i class="tri" style="width:44px;height:44px;left:88%;top:62%;--d:16s"></i><i class="dot" style="width:12px;height:12px;left:30%;top:72%;--d:9s"></i><i class="plus" style="width:22px;height:22px;left:62%;top:86%;--d:12s"></i><i class="ring" style="width:40px;height:40px;left:94%;top:22%;--d:10s"></i><i class="sq" style="width:18px;height:18px;left:14%;top:90%;--d:13s"></i></div>
+  <nav class="side-nav" aria-label="Secciones">
+    <a href="#inicio" aria-label="Inicio" title="Inicio"></a>
+    <a href="#proyectos" aria-label="Proyectos" title="Proyectos"></a>
+    <a href="#perfil" aria-label="Sobre mí" title="Sobre mí"></a>
+    <a href="#contacto" aria-label="Contacto" title="Contacto"></a>
+  </nav>
+  <header class="header wrap">
+    <a class="brand" href="#inicio" aria-label="William Pérez Muñoz, inicio"><img src="assets/logo.svg" width="40" height="40" alt=""><b>williamppmm</b></a>
     <nav aria-label="Navegación principal">
       <a href="#proyectos">Proyectos</a>
       <a href="#perfil">Sobre mí</a>
-      <a class="nav-contact" href="#contacto">Contacto <span aria-hidden="true">↗</span></a>
+      <a href="#contacto">Contacto</a>
+      <a class="button" href="https://github.com/williamppmm">GitHub <span aria-hidden="true">↗</span></a>
     </nav>
   </header>
-  <main id="contenido" class="wrap">
-    <section class="hero" aria-labelledby="nombre">
-      <div class="intro">
-        <p class="eyebrow"><i aria-hidden="true"></i> Cali, Colombia</p>
-        <h1 id="nombre">William<br>Pérez Muñoz<span>.</span></h1>
-        <p class="role">Desarrollo web <span aria-hidden="true">/</span> Automatización</p>
-        <p class="intro-text">Cada proyecto empieza por escuchar. Me interesa entender qué quieres resolver y qué esperas conseguir para construir contigo una solución que funcione en la práctica.</p>
-        <div class="actions">
-          <a class="button primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
-          <a class="button outline" href="https://github.com/williamppmm">GitHub <span aria-hidden="true">↗</span></a>
+  <main id="contenido">
+    <div class="wrap">
+      <section class="hero" id="inicio" aria-labelledby="nombre">
+        <div class="intro">
+          <p class="eyebrow"><i aria-hidden="true"></i>Cali, Colombia</p>
+          <h1 id="nombre">William<br><span class="outline">Pérez</span><br>Muñoz<span class="dot">.</span></h1>
+          <div class="bars" aria-hidden="true"></div>
+          <p class="role">Desarrollo web <span aria-hidden="true">/</span> Automatización</p>
+          <p class="intro-text">Cada proyecto empieza por escuchar. Me interesa entender qué quieres resolver y qué esperas conseguir para construir contigo una solución que funcione en la práctica.</p>
+          <div class="actions">
+            <a class="button primary" href="#proyectos">Explorar proyectos <span aria-hidden="true">↓</span></a>
+            <a class="button" href="#contacto">Contacto <span aria-hidden="true">→</span></a>
+          </div>
         </div>
-      </div>
-      <figure class="portrait">
-        <div class="portrait-frame">
-          <img class="portrait-photo" src="assets/william-perfil.webp" width="900" height="900" alt="Retrato de William Pérez Muñoz en blanco y negro" fetchpriority="high">
+        <div class="hero-visual">
+          <div class="orbit" aria-hidden="true">
+            <div class="o-outer"></div><div class="o-dash"></div><div class="o-sat"></div>
+            <div class="o-diamond"></div><div class="o-grad"></div>
+            <div class="o-face"><img src="assets/logo.svg" width="320" height="320" alt=""></div>
+          </div>
+          <button class="motion-toggle" type="button" aria-pressed="false" hidden>Pausar animación</button>
         </div>
-        <figcaption><span>William Pérez Muñoz</span><span>Tecnólogo ADSO · SENA</span></figcaption>
-      </figure>
-    </section>
-
-    <section class="projects" id="proyectos" aria-labelledby="proyectos-titulo">
-      <div class="section-head">
-        <div><p class="eyebrow"><i aria-hidden="true"></i> Portafolio</p><h2 id="proyectos-titulo">Proyectos seleccionados</h2></div>
-        <div class="filters" hidden aria-label="Filtrar proyectos" role="group">
-          <button type="button" data-filter="all" aria-pressed="true">Todos</button>
-          <button type="button" data-filter="web" aria-pressed="false">Web</button>
-          <button type="button" data-filter="ops" aria-pressed="false">Operaciones</button>
-          <button type="button" data-filter="data" aria-pressed="false">Datos</button>
+      </section>
+    </div>
+    <div class="wrap">
+      <section class="projects" id="proyectos" aria-labelledby="proyectos-titulo">
+        <div class="section-head">
+          <div><p class="eyebrow"><i aria-hidden="true"></i>Portafolio</p><h2 id="proyectos-titulo">Proyectos<br>seleccionados</h2></div>
+          <div class="filters" hidden aria-label="Filtrar proyectos" role="group">
+            <button type="button" data-filter="all" aria-pressed="true">Todos</button>
+            <button type="button" data-filter="web" aria-pressed="false">Web</button>
+            <button type="button" data-filter="ops" aria-pressed="false">Operaciones</button>
+            <button type="button" data-filter="data" aria-pressed="false">Datos</button>
+          </div>
         </div>
-      </div>
-      <p class="sr-only" role="status" id="resultados"></p>
-      <div class="project-grid">
+        <p class="sr-only" role="status" id="resultados"></p>
+        <div class="project-grid">
         <article class="project" data-category="web">
-          <div class="art art-industrial" aria-hidden="true"><span class="art-label">SERVICIOS INDUSTRIALES</span><strong>UMEP<span>.</span></strong><div class="industrial-mark"></div></div>
-          <div class="project-body"><h3>UMEP Cali</h3><p>Sitio corporativo para una empresa de mantenimiento industrial, con servicios especializados y vías de contacto para solicitar asistencia técnica.</p><ul class="tags" aria-label="Tecnologías"><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li></ul><div class="links"><a href="https://umepcali.com/">Ver sitio ↗</a><a href="https://github.com/williamppmm/umep">Ver código ↗</a></div></div>
+          <div class="art art-p0" aria-hidden="true"><div class="art-text"><span class="art-label">SERVICIOS INDUSTRIALES</span><strong>UMEP</strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>UMEP Cali</h3></div><p>Sitio corporativo para una empresa de mantenimiento industrial, con servicios especializados y vías de contacto para solicitar asistencia técnica.</p><ul class="tags" aria-label="Tecnologías"><li>Next.js</li><li>TypeScript</li><li>Tailwind CSS</li></ul><div class="links"><a href="https://umepcali.com/">Ver sitio ↗</a><a href="https://github.com/williamppmm/umep">Ver código ↗</a></div></div>
         </article>
         <article class="project" data-category="ops">
-          <div class="art art-capture" aria-hidden="true"><div class="mini-window"><div class="mini-title"><span></span><span></span><span></span></div><div class="mini-table"><i></i><i></i><i></i><i></i></div></div><span class="art-label">REGISTRO OPERATIVO</span></div>
-          <div class="project-body"><h3>Capturadora Multimódulo</h3><p>Aplicación para reunir registros operativos en una misma interfaz. El módulo de contadores está en desarrollo, con foco en agilizar la captura y la consulta.</p><ul class="tags" aria-label="Tecnologías"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="links"><span class="project-status">En desarrollo</span></div></div>
+          <div class="art art-p1" aria-hidden="true"><div class="art-text"><span class="art-label">REGISTRO OPERATIVO</span><strong>Capturadora</strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>Capturadora Multimódulo</h3></div><p>Aplicación para reunir registros operativos en una misma interfaz. El módulo de contadores está en desarrollo, con foco en agilizar la captura y la consulta.</p><ul class="tags" aria-label="Tecnologías"><li>HTML</li><li>CSS</li><li>JavaScript</li></ul><div class="links"><span class="project-status">En desarrollo</span></div></div>
         </article>
         <article class="project" data-category="data">
-          <div class="art art-radar" aria-hidden="true"><span class="art-label">ANÁLISIS FUNDAMENTAL</span><strong>RVC Radar</strong><div class="radar-bars"><i></i><i></i><i></i><i></i></div></div>
-          <div class="project-body"><h3>RVC Radar</h3><p>Herramienta de análisis fundamental que reúne datos financieros y evalúa empresas por valoración, calidad, salud financiera y crecimiento.</p><ul class="tags" aria-label="Tecnologías"><li>Python</li><li>Flask</li></ul><div class="links"><a href="https://github.com/williamppmm/rvc-investment-analyzer">Ver código ↗</a></div></div>
+          <div class="art art-p2" aria-hidden="true"><div class="art-text"><span class="art-label">ANÁLISIS FUNDAMENTAL</span><strong>RVC Radar</strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>RVC Radar</h3></div><p>Herramienta de análisis fundamental que reúne datos financieros y evalúa empresas por valoración, calidad, salud financiera y crecimiento.</p><ul class="tags" aria-label="Tecnologías"><li>Python</li><li>Flask</li></ul><div class="links"><a href="https://github.com/williamppmm/rvc-investment-analyzer">Ver código ↗</a></div></div>
         </article>
         <article class="project" data-category="web">
-          <div class="art art-store" aria-hidden="true"><span class="art-label">CATÁLOGO DIGITAL</span><strong>MALEJA</strong><em>Calzado</em><div class="store-rings"></div></div>
-          <div class="project-body"><h3>MALEJA Calzado</h3><p>Plataforma para mostrar calzado femenino, organizar su catálogo y apoyar la venta en línea de un negocio local.</p><ul class="tags" aria-label="Tecnologías"><li>PHP</li><li>MySQL</li></ul><div class="links"><a href="https://www.malejacalzado.com/">Ver sitio ↗</a></div></div>
+          <div class="art art-p3" aria-hidden="true"><div class="art-text"><span class="art-label">CATÁLOGO DIGITAL</span><strong>MALEJA<em>Calzado</em></strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>MALEJA Calzado</h3></div><p>Plataforma para mostrar calzado femenino, organizar su catálogo y apoyar la venta en línea de un negocio local.</p><ul class="tags" aria-label="Tecnologías"><li>PHP</li><li>MySQL</li></ul><div class="links"><a href="https://www.malejacalzado.com/">Ver sitio ↗</a></div></div>
         </article>
         <article class="project" data-category="ops">
-          <div class="art art-fortuna" aria-hidden="true"><span class="art-label">GESTIÓN CONTABLE</span><strong>La Fortuna</strong><div class="fortuna-ledger"><i></i><i></i><i></i></div></div>
-          <div class="project-body"><h3>Casino La Fortuna</h3><p>Proyecto de formación ADSO desarrollado en equipo para centralizar el seguimiento operativo y contable de un casino.</p><ul class="tags" aria-label="Tecnologías"><li>React</li><li>Node.js</li><li>Supabase</li></ul><div class="links"><a href="https://casino-la-fortuna.vercel.app/">Ver demo ↗</a><a href="https://github.com/williamppmm/casino_proyecto_react_hosting">Ver código ↗</a></div></div>
+          <div class="art art-p0" aria-hidden="true"><div class="art-text"><span class="art-label">GESTIÓN CONTABLE</span><strong>La Fortuna</strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>Casino La Fortuna</h3></div><p>Proyecto de formación ADSO desarrollado en equipo para centralizar el seguimiento operativo y contable de un casino.</p><ul class="tags" aria-label="Tecnologías"><li>React</li><li>Node.js</li><li>Supabase</li></ul><div class="links"><a href="https://casino-la-fortuna.vercel.app/">Ver demo ↗</a><a href="https://github.com/williamppmm/casino_proyecto_react_hosting">Ver código ↗</a></div></div>
         </article>
         <article class="project" data-category="data ops">
-          <div class="art art-export" aria-hidden="true"><span class="art-label">AUTOMATIZACIÓN CONTABLE</span><strong>Datos a Excel</strong><div class="export-flow"><i></i><span>→</span><i></i><span>→</span><i></i></div></div>
-          <div class="project-body"><h3>Practi Genesis</h3><p>Automatización para extraer registros de una plataforma contable y llevarlos a hojas de cálculo que puedan revisarse y procesarse en Excel.</p><ul class="tags" aria-label="Tecnologías"><li>Python</li><li>Selenium</li><li>openpyxl</li></ul><div class="links"><span class="project-status">Automatización de uso interno</span></div></div>
+          <div class="art art-p1" aria-hidden="true"><div class="art-text"><span class="art-label">AUTOMATIZACIÓN CONTABLE</span><strong>Datos a Excel</strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>Practi Genesis</h3></div><p>Automatización para extraer registros de una plataforma contable y llevarlos a hojas de cálculo que puedan revisarse y procesarse en Excel.</p><ul class="tags" aria-label="Tecnologías"><li>Python</li><li>Selenium</li><li>openpyxl</li></ul><div class="links"><span class="project-status">Automatización de uso interno</span></div></div>
         </article>
         <article class="project" data-category="ops">
-          <div class="art art-cash" aria-hidden="true"><span class="art-label">CIERRE DIARIO POR SEDE</span><strong>Caja JDW</strong><div class="fortuna-ledger"><i></i><i></i><i></i></div></div>
-          <div class="project-body"><h3>Caja Multisede JDW</h3><p>Aplicación local para capturar, validar y consolidar movimientos diarios por sede, con libros anuales de Excel como base de la operación.</p><ul class="tags" aria-label="Tecnologías"><li>Python</li><li>Excel</li></ul><div class="links"><a href="https://github.com/williamppmm/caja-multisede-jdw">Ver código ↗</a></div></div>
+          <div class="art art-p2" aria-hidden="true"><div class="art-text"><span class="art-label">CIERRE DIARIO POR SEDE</span><strong>Caja JDW</strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>Caja Multisede JDW</h3></div><p>Aplicación local para capturar, validar y consolidar movimientos diarios por sede, con libros anuales de Excel como base de la operación.</p><ul class="tags" aria-label="Tecnologías"><li>Python</li><li>Excel</li></ul><div class="links"><a href="https://github.com/williamppmm/caja-multisede-jdw">Ver código ↗</a></div></div>
         </article>
         <article class="project" data-category="web">
-          <div class="art art-seed" aria-hidden="true"><span class="art-label">FUNDACIÓN EN CALI</span><strong>Sembrando<br>Oportunidades</strong></div>
-          <div class="project-body"><h3>Sembrando Oportunidades</h3><p>Sitio web de una fundación caleña que ofrece talleres prácticos para desarrollar habilidades y apoyar pequeños emprendimientos.</p><ul class="tags" aria-label="Tecnologías"><li>Sitio estático</li></ul><div class="links"><a href="https://www.sembrandooportunidades.org/">Ver sitio ↗</a></div></div>
+          <div class="art art-p3" aria-hidden="true"><div class="art-text"><span class="art-label">FUNDACIÓN EN CALI</span><strong>Sembrando</strong></div></div>
+          <div class="project-body"><div class="project-title"><h3>Sembrando Oportunidades</h3></div><p>Sitio web de una fundación caleña que ofrece talleres prácticos para desarrollar habilidades y apoyar pequeños emprendimientos.</p><ul class="tags" aria-label="Tecnologías"><li>Sitio estático</li></ul><div class="links"><a href="https://www.sembrandooportunidades.org/">Ver sitio ↗</a></div></div>
         </article>
-      </div>
-      <a class="repo-link" href="https://github.com/williamppmm?tab=repositories">Explorar más repositorios en GitHub <span aria-hidden="true">↗</span></a>
-    </section>
-
-    <section class="about" id="perfil" aria-labelledby="perfil-titulo">
-      <div><p class="eyebrow"><i aria-hidden="true"></i> Sobre mí</p><h2 id="perfil-titulo">Del proceso<br>al código.</h2></div>
-      <div class="about-content">
-        <p>Soy William Pérez Muñoz, tecnólogo en Análisis y Desarrollo de Software del SENA. Trabajo en procesos contables en Cali. Esa experiencia me ayuda a entender qué datos necesita un negocio y dónde se pierde tiempo al registrarlos.</p>
-        <p>Empiezo por entender cómo se hace el trabajo hoy. Con esa información diseño la interfaz, organizo los datos y automatizo los pasos que se repiten.</p>
-        <ul class="focus-list"><li>Desarrollo web</li><li>Automatización de procesos</li><li>Análisis de datos</li></ul>
-      </div>
-    </section>
-
-    <section class="contact" id="contacto" aria-labelledby="contacto-titulo">
-      <div><p class="eyebrow"><i aria-hidden="true"></i> Contacto</p><h2 id="contacto-titulo">Hablemos de tu proyecto.</h2><p>Cuéntame qué proceso quieres simplificar o qué necesitas construir.</p></div>
-      <div class="actions">
-        <a class="button primary" href="mailto:contacto@williamppmm.link">Escríbeme <span aria-hidden="true">↗</span></a>
-        <a class="button outline" href="tel:+573152728882" aria-label="Llamar al +57 315 272 8882">+57 315 272 8882</a>
-        <a class="button outline" href="William_Perez_Munoz.vcf" download="William_Perez_Munoz.vcf">Guardar contacto <span aria-hidden="true">↓</span></a>
-        <a class="button outline" href="https://www.linkedin.com/in/william-perez-mu%C3%B1oz-683835211/">LinkedIn <span aria-hidden="true">↗</span></a>
-        <a class="button outline" href="https://gravatar.com/baby1517eadc72a" aria-label="Perfil verificado en Gravatar">Gravatar <span aria-hidden="true">↗</span></a>
-      </div>
-    </section>
+        </div>
+        <a class="repo-link" href="https://github.com/williamppmm?tab=repositories">Explorar más repositorios en GitHub ↗</a>
+      </section>
+      <section class="about" id="perfil" aria-labelledby="perfil-titulo">
+        <div>
+          <p class="eyebrow"><i aria-hidden="true"></i>Sobre mí</p>
+          <h2 id="perfil-titulo">Del proceso<br>al código<span>.</span></h2>
+          <img class="about-portrait" src="assets/william-perfil.webp" width="900" height="900" alt="Retrato de William Pérez Muñoz" loading="lazy">
+        </div>
+        <div class="about-content">
+          <p>Soy William Pérez Muñoz, tecnólogo en Análisis y Desarrollo de Software del SENA. Trabajo en procesos contables en Cali. Esa experiencia me ayuda a entender qué datos necesita un negocio y dónde se pierde tiempo al registrarlos.</p>
+          <p>Empiezo por entender cómo se hace el trabajo hoy. Con esa información diseño la interfaz, organizo los datos y automatizo los pasos que se repiten.</p>
+          <ul class="focus-list"><li>Desarrollo web</li><li>Automatización de procesos</li><li>Análisis de datos</li></ul>
+        </div>
+      </section>
+      <section class="contact" id="contacto" aria-labelledby="contacto-titulo">
+        <div><p class="eyebrow"><i aria-hidden="true"></i>Contacto</p><h2 id="contacto-titulo">Hablemos de tu <span>proyecto</span>.</h2><p>Cuéntame qué proceso quieres simplificar o qué necesitas construir.</p></div>
+        <div class="actions">
+          <a class="button primary" href="mailto:contacto@williamppmm.link">Escríbeme <span aria-hidden="true">↗</span></a>
+          <a class="button" href="tel:+573152728882" aria-label="Llamar al +57 315 272 8882">+57 315 272 8882</a>
+          <a class="button" href="William_Perez_Munoz.vcf" download="William_Perez_Munoz.vcf">Guardar contacto <span aria-hidden="true">↓</span></a>
+          <a class="button" href="https://www.linkedin.com/in/william-perez-mu%C3%B1oz-683835211/">LinkedIn <span aria-hidden="true">↗</span></a>
+          <a class="button" href="https://gravatar.com/baby1517eadc72a" aria-label="Perfil verificado en Gravatar">Gravatar <span aria-hidden="true">↗</span></a>
+        </div>
+      </section>
+    </div>
   </main>
-  <footer class="footer wrap"><a class="brand" href="#inicio"><span class="brand-mark"><img src="assets/wp.png" width="40" height="40" alt=""></span><b>William Pérez Muñoz</b></a><a href="#inicio">Volver arriba ↑</a></footer>
+  <footer class="footer wrap"><a class="brand" href="#inicio"><img src="assets/logo.svg" width="28" height="28" alt=""><b>William Pérez Muñoz</b></a><a href="#inicio">Volver arriba ↑</a></footer>
 </body>
 </html>
