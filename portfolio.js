@@ -98,7 +98,8 @@
     document.documentElement.classList.toggle('motion-running', running);
     if (toggle) {
       toggle.hidden = motion.matches;
-      toggle.setAttribute('aria-pressed', String(paused));
+      toggle.textContent = paused ? 'Reanudar animación' : 'Pausar animación';
+      toggle.toggleAttribute('data-paused', paused);
     }
     if (running && ctx) frame = requestAnimationFrame(animate);
   }

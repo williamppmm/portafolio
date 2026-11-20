@@ -101,7 +101,7 @@ section[id]{scroll-margin-top:1rem}
   font: 600 .8rem var(--body);
   cursor: pointer;
 }
-.motion-toggle[aria-pressed="true"] { border-color: var(--green); }
+.motion-toggle[data-paused] { border-color: var(--green); }
 /* Supera la especificidad de los atajos animation de los anillos. */
 :root:not(.motion-running) :is(.geo i, .orbit > div) { animation-play-state: paused; }
 
